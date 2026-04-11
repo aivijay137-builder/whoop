@@ -2,7 +2,7 @@
 
 A prototype that detects: when WHOOP users might be getting sick **before they feel symptoms**, using heart rate, HRV, and other wearable data.
 
-## 🎯 What This Does
+## What This Does
 
 **Problem**: WHOOP users often see they were sick only *after* checking old data. They miss the 24-72 hour window to rest, hydrate, and recover faster.
 
@@ -11,7 +11,7 @@ A prototype that detects: when WHOOP users might be getting sick **before they f
 - **Tier 2**: Push notification ("Prioritize rest tonight") 
 - **Tier 3**: Strong warning + doctor suggestion (high confidence, 3+ days)
 
-## 🧠 How It Works (Simple Version)
+##  How It Works (Simple Version)
 Learn your NORMAL → 30-day baseline for each metric
 
 Spot DEVIATIONS → Z-scores (how far from your normal?)
@@ -53,7 +53,7 @@ whoop-illness-ews/
 
 text
 
-## 📊 Results on Test Data
+##  Results on Test Data
 ✅ 78% illness detection by symptom Day 2
 ✅ 4.2% false alerts per member per month
 ✅ 62% notification open rate
@@ -62,7 +62,7 @@ text
 
 text
 
-## 🎮 Screens You Can Try
+##  Screens You Can Try
 
 | Screen | What it shows |
 |--------|---------------|
@@ -72,7 +72,7 @@ text
 | **Member Timeline** | 90-day trends + illness markers |
 | **Admin Debug** | Audit trail + population stats |
 
-## 🛠️ Built With
+##  Built With
 Python + Pandas (data processing)
 
 Streamlit (UI)
@@ -93,7 +93,7 @@ text
 
 text
 
-## 🤔 Known Limitations
+##  Known Limitations
 ⚠️ Synthetic data only (not real WHOOP data)
 ⚠️ Simplified confounders (real life = more complex)
 ⚠️ No real-time processing (batch nightly only)
