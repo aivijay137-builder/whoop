@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDemoData } from '../context/DemoContext.jsx';
 import { TIER_CONFIG, getTierColor, formatDelta } from '../utils/tierUtils.js';
 import BottomNav from '../components/BottomNav.jsx';
-import DemoStateBar from '../components/DemoStateBar.jsx';
+import MemberSelector from '../components/MemberSelector.jsx';
 import ConfounderNote from '../components/ConfounderNote.jsx';
 
 // ─── Icons ────────────────────────────────────────────────────────────────────
@@ -803,7 +803,7 @@ export default function Dashboard() {
         </button>
       )}
 
-      <DemoStateBar />
+      <MemberSelector />
       <BottomNav active="home" />
     </div>
   );

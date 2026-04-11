@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDemoData } from '../context/DemoContext.jsx';
 import { getTierColor } from '../utils/tierUtils.js';
 import BottomNav from '../components/BottomNav.jsx';
-import DemoStateBar from '../components/DemoStateBar.jsx';
+import MemberSelector from '../components/MemberSelector.jsx';
 import ConfounderNote from '../components/ConfounderNote.jsx';
 import DismissModal from '../components/DismissModal.jsx';
 
@@ -32,9 +32,10 @@ function getTopMetrics(today) {
   return usable.slice(0, 3);
 }
 
+// Pipeline z-scores are directional positive-only (0 = no adverse deviation).
 function isAdverse(key, z) {
   if (z == null) return false;
-  return (key === 'hrv' || key === 'spo2') ? z < 0 : z > 0;
+  return z > 0;
 }
 
 function formatMetricDelta(value, baseline, unit) {
@@ -532,7 +533,7 @@ export default function GuidanceDetail() {
         </button>
       </div>
 
-      <DemoStateBar />
+      <MemberSelector />
       <BottomNav active="home" />
 
       {/* ── Dismiss modal ─────────────────────────────── */}

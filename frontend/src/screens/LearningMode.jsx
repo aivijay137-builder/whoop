@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDemoData } from '../context/DemoContext.jsx';
 import BottomNav from '../components/BottomNav.jsx';
-import DemoStateBar from '../components/DemoStateBar.jsx';
+import MemberSelector from '../components/MemberSelector.jsx';
 
 // ─── Circular Progress Ring ───────────────────────────────────────────────────
 // SVG arc showing nights collected out of total. Matches PNG center illustration.
@@ -386,7 +386,7 @@ export default function LearningMode() {
         </div>
       </div>
 
-      <DemoStateBar />
+      <MemberSelector />
       <BottomNav active="home" />
     </div>
   );

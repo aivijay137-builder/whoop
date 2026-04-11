@@ -6,7 +6,15 @@
       "Bash(ls /c/Python*)",
       "Read(//c/Users/vijay/AppData/Local/Programs/**)",
       "Bash(python3 -c \"import pandas; print\\(''pandas'', pandas.__version__\\)\")",
-      "Bash(npx vite:*)"
+      "Bash(npx vite:*)",
+      "Bash(vercel deploy:*)",
+      "Bash(node src/preprocess_for_frontend.mjs)",
+      "Bash(node:*)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/data/members.json)",
+      "Bash(git -C \"C:/Users/vijay/test workspace/whoop-illness-ews\" add .)",
+      "Bash(git -C \"C:/Users/vijay/test workspace/whoop-illness-ews\" commit -m \"Bind member views to CSV data by member_id\")",
+      "Bash(git -C \"C:/Users/vijay/test workspace/whoop-illness-ews\" push)"
     ]
   }
 }

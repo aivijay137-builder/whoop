@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDemoData } from '../context/DemoContext.jsx';
 import { getTierColor, getTierLabel } from '../utils/tierUtils.js';
 import BottomNav from '../components/BottomNav.jsx';
-import DemoStateBar from '../components/DemoStateBar.jsx';
+import MemberSelector from '../components/MemberSelector.jsx';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -559,7 +559,7 @@ export default function TimelineHistory() {
         )}
       </div>
 
-      <DemoStateBar />
+      <MemberSelector />
       <BottomNav active="history" />
     </div>
   );

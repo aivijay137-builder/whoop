@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDemoData } from '../context/DemoContext.jsx';
 import { formatDelta } from '../utils/tierUtils.js';
 import BottomNav from '../components/BottomNav.jsx';
-import DemoStateBar from '../components/DemoStateBar.jsx';
+import MemberSelector from '../components/MemberSelector.jsx';
 import ConfounderNote from '../components/ConfounderNote.jsx';
 import DismissModal from '../components/DismissModal.jsx';
 
@@ -107,9 +107,11 @@ function getTopMetrics(today) {
   return usable.slice(0, 3);
 }
 
+// Pipeline z-scores are directional positive-only (0 = no adverse deviation;
+// positive = adverse regardless of metric direction).
 function isAdverse(key, z) {
   if (z == null) return false;
-  return (key === 'hrv' || key === 'spo2') ? z < 0 : z > 0;
+  return z > 0;
 }
 
 // ─── 3-Night Deviation Bar Chart ─────────────────────────────────────────────
@@ -290,7 +292,7 @@ export default function AdvisoryDetail() {
         >
           Back to dashboard
         </button>
-        <DemoStateBar />
+        <MemberSelector />
         <BottomNav active="home" />
       </div>
     );
@@ -438,7 +440,7 @@ export default function AdvisoryDetail() {
         </button>
       </div>
 
-      <DemoStateBar />
+      <MemberSelector />
       <BottomNav active="home" />
 
       {/* ── Dismiss modal — centered chip dialog (screen 04) ── */}
