@@ -25,7 +25,7 @@ HRV (35%) ↓ + RHR (25%) ↑ + RR (20%) ↑ + Temp (15%) ↑ + SpO2 (5%) ↓
 30-day rolling median baseline per member
 Z-score deviation with quality gating (<70% suppressed)
 
-Synthetic Data (200 members × 90 nights)
+Synthetic Data (100 members × 90 nights)
 ✅ Healthy baseline periods
 ✅ Illness episodes (pre-symptomatic drift)
 ✅ Alcohol confounders (HRV suppression)
